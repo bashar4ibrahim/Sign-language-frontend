@@ -39,7 +39,7 @@ const Admin = () => {
       }
     };
     fetchUsers();
-  }, [navigate]);
+  }, [navigate,SERVER_URL]);
 
   // Delete a user
   const handleDelete = async (userId) => {

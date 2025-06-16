@@ -1,6 +1,5 @@
 import React, { useState, useEffect , useRef} from 'react';
 import { FaPlay, FaStop, FaPlus, FaTrash, FaVolumeUp } from 'react-icons/fa';
-import { MdSave } from 'react-icons/md';
 import './EmergencyPhrases.css';
  const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const EmergencyPhrases = () => {

@@ -3,7 +3,7 @@ import './AutoScrollCards.css';
 import backgroundImage from '../Assests/SignSlide.png'; // Replace with your image path
 
 const AutoScrollCards = ({ scrollDirection = "vertical" }) => {
-const [cards, setCards] = useState([
+const cards = useState([
   {
     id: 1,
     amount: "5 Stars",

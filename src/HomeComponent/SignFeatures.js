@@ -103,9 +103,7 @@ const SignFeatures = () => {
               />
             </h3>
             <p className="description">{feature.description}</p>
-            <a href="#" className="see-how">
-              See How →
-            </a>
+            
           </motion.div>
         ))}
       </motion.div>

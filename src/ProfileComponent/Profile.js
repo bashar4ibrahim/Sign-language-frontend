@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Profile.css';
-import AutoScrollCards from '../HomeComponent/AutoScrollCards';
+
 import { FiEdit, FiHeart, FiMessageSquare, FiLogOut, FiMail } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import {  FiUser, FiCalendar, FiMapPin } from 'react-icons/fi';
@@ -17,7 +17,7 @@ const Profile = () => {
   const [tempProfileImage, setTempProfileImage] = useState(null);
   const [tempMiddleImage, setTempMiddleImage] = useState(null);
   const [likes, setLikes] = useState(0);
-  const [isEditing, setIsEditing] = useState(false);
+  
   const [isFollowing, setIsFollowing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const SERVER_URL = process.env.REACT_APP_SERVER_URL;
