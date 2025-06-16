@@ -1,0 +1,226 @@
+/* Timeline.css - Updated for alternating sides */
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #3a86ff, #8338ec);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.timeline-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3a86ff, #8338ec);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.timeline-item {
+  width: 100%;
+  margin-bottom: 4rem;
+  position: relative;
+  clear: both;
+}
+
+.timeline-content {
+  position: relative;
+  width: 42%;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Left-aligned items (even indexes) */
+.timeline-item.left .timeline-content {
+  float: left;
+  margin-left: 4%;
+}
+
+/* Right-aligned items (odd indexes) */
+.timeline-item.right .timeline-content {
+  float: right;
+  margin-right: 4%;
+}
+
+.timeline-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  top: 20px;
+}
+
+/* Position icons based on alignment */
+.timeline-item.left .timeline-icon {
+  right: -30px;
+}
+
+.timeline-item.right .timeline-icon {
+  left: -30px;
+}
+
+.timeline-year {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #8338ec;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.timeline-item-title {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.timeline-item-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.timeline-connector {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #3a86ff, #8338ec);
+  top: 40px;
+}
+
+/* Position connectors based on alignment */
+.timeline-item.left .timeline-connector {
+  right: -30px;
+}
+
+.timeline-item.right .timeline-connector {
+  left: -30px;
+}
+
+/* Responsive Design - Stack on mobile */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    width: calc(100% - 90px);
+    float: none;
+    margin-left: 70px;
+    margin-right: 0;
+  }
+  
+  .timeline-item.left .timeline-icon,
+  .timeline-item.right .timeline-icon {
+    left: 0;
+    right: auto;
+  }
+  
+  .timeline-item.left .timeline-connector,
+  .timeline-item.right .timeline-connector {
+    left: 60px;
+    right: auto;
+  }
+}
+
+/* Animation for the timeline line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 0;
+  background: linear-gradient(to bottom, #3a86ff, #8338ec);
+  border-radius: 10px;
+  z-index: 1;
+  animation: fillLine 2s ease-out forwards;
+}
+
+@keyframes fillLine {
+  to {
+    height: 100%;
+  }
+}
+
+/* Floating animation for icons */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.timeline-icon {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Different delays for each icon */
+.timeline-item:nth-child(1) .timeline-icon {
+  animation-delay: 0s;
+}
+.timeline-item:nth-child(2) .timeline-icon {
+  animation-delay: 0.5s;
+}
+.timeline-item:nth-child(3) .timeline-icon {
+  animation-delay: 1s;
+}
+.timeline-item:nth-child(4) .timeline-icon {
+  animation-delay: 1.5s;
+}
+.timeline-item:nth-child(5) .timeline-icon {
+  animation-delay: 2s;
+}
+.timeline-item:nth-child(6) .timeline-icon {
+  animation-delay: 2.5s;
+}

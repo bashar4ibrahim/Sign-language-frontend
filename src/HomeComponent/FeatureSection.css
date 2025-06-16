@@ -1,0 +1,153 @@
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f9fafb;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  gap: 2.5rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .feature-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ---------------- Circle Design ---------------- */
+.circle-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
+  animation: pulse 5s infinite ease-in-out;
+}
+
+.outer { width: 100%; height: 100%; }
+.mid { width: 80%; height: 80%; }
+.small { width: 60%; height: 60%; }
+.inner { width: 40%; height: 40%; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.react-logo {
+  width: 56px;
+  height: 56px;
+  z-index: 2;
+}
+
+/* Interactive Elements */
+.signup-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #1e40af;
+}
+
+.toggle-switch {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: #10b981;
+  width: 2.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+}
+
+.check-icon {
+  position: absolute;
+  bottom: 1rem;
+  left: 0.75rem;
+  background-color: #f97316;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+}
+
+.plus-icon {
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+  background-color: #facc15;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------- Text Content ---------------- */
+.text-content {
+  max-width: 620px;
+  text-align: left;
+  flex: 1;
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-blue {
+  color: #3b82f6;
+}
+
+.highlight-cyan {
+  color: #06b6d4;
+}
+
+/* ---------------- Feature Grid ---------------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.75rem;
+  font-size: 0.95rem;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+  color: #2563eb;
+}

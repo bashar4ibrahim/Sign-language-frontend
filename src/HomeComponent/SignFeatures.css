@@ -1,0 +1,205 @@
+/* SignFeatures.css */
+:root {
+  --primary-color: #3a86ff;
+  --primary-light: #5d9cff;
+  --secondary-color: #8338ec;
+  --secondary-light: #9a5aee;
+  --accent-color: #ff006e;
+  --accent-light: #ff3a8a;
+  --yellow-color: #ffbe0b;
+  --yellow-light: #ffd24d;
+  --text-color: #2c3e50;
+  --text-light: #666;
+  --bg-color: #f8f9fa;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+.features-header {
+  margin-bottom: 3rem;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.features-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+  z-index: -1;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Specific Styles */
+.feature-card-accessibility .icon-container {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  box-shadow: 0 10px 20px rgba(58, 134, 255, 0.2);
+}
+
+.feature-card-accessibility .see-how {
+  color: var(--primary-color);
+}
+
+.feature-card-translation .icon-container {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
+  box-shadow: 0 10px 20px rgba(131, 56, 236, 0.2);
+}
+
+.feature-card-translation .see-how {
+  color: var(--secondary-color);
+}
+
+.feature-card-ui .icon-container {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+  box-shadow: 0 10px 20px rgba(255, 0, 110, 0.2);
+}
+
+.feature-card-ui .see-how {
+  color: var(--accent-color);
+}
+
+.feature-card-gesture .icon-container {
+  background: linear-gradient(135deg, var(--yellow-color) 0%, var(--yellow-light) 100%);
+  box-shadow: 0 10px 20px rgba(255, 190, 11, 0.2);
+}
+
+.feature-card-gesture .see-how {
+  color: var(--yellow-color);
+}
+
+.icon-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-container {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.icon {
+  font-size: 2rem;
+  color: white;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  min-height: 50px;
+}
+
+.see-how {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.see-how::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.see-how:hover::after {
+  width: 100%;
+}
+
+/* Typewriter cursor styling */
+.Typewriter__cursor {
+  color: var(--primary-color);
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features-title {
+    font-size: 2rem;
+  }
+  
+  .features-subtitle {
+    font-size: 1rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

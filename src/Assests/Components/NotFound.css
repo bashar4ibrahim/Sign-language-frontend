@@ -1,0 +1,30 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.lottie-animation {
+  max-width: 250px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.error-content {
+  text-align: center;
+}
+
+.error-content h1 {
+  font-size: 3.5rem;  /* Reduced from 6rem */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.error-content p {
+  font-size: 1.25rem;  /* Reduced */
+  margin-bottom: 1.5rem;
+}

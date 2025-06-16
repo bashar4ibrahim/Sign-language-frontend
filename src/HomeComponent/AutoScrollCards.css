@@ -1,0 +1,208 @@
+/* Main Container Styles */
+.combined-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Image Container */
+.image-container {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 500px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.image-container:hover .background-image {
+  transform: scale(1.05);
+}
+
+.scrolling-cards-container.horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+ max-width: 1000px;  /* Try 1400px, 1600px, or more */
+  width: 100%;
+
+
+}
+
+
+/* Frosted Glass Style Container */
+.scrolling-cards-container.vertical {
+  height: 480px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem 1rem;
+}
+
+
+.cards-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 250px; /* or adjust depending on card height */
+}
+.cards-overlay {
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: 100%px; /* or whatever height fits your card */
+  max-width: 150%px; /* or 100% */
+  overflow-x: auto; /* enable scrolling */
+}
+
+
+
+
+/* User Card Styles */
+/* Individual Card */
+.user-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-width: 260px;
+  width: 260px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.user-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header */
+.user-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.follow-button {
+  font-size: 0.8rem;
+  color: #6366f1;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.follow-button:hover {
+  color: #4f46e5;
+}
+
+/* Comment & Footer */
+.user-comment {
+  font-size: 0.92rem;
+  color: #4b5563;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.user-card-footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.user-amount {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1f2937;
+  margin-right: 0.4rem;
+}
+
+.user-period {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .combined-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 1.5rem;
+  }
+
+  .scrolling-cards-container.vertical {
+    height: 420px;
+  }
+
+  .cards-wrapper {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-card {
+    min-width: 220px;
+    padding: 1rem;
+  }
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .scrolling-cards-container.vertical {
+    height: 380px;
+  }
+
+  .image-container {
+    height: 300px;
+  }
+}
