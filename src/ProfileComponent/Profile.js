@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import {  FiUser, FiCalendar, FiMapPin } from 'react-icons/fi';
 
 import { motion } from 'framer-motion';
-
+  const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const Profile = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
@@ -20,7 +20,7 @@ const Profile = () => {
   
   const [isFollowing, setIsFollowing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 
   // In your Profile.js
 const navigateToEditProfile = () => {

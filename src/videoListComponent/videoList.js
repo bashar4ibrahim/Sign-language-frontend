@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './videoList.css';
 import PropTypes from 'prop-types';
-
+ const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const VideoList = ({ categoryId, onVideoCompleted, videos = [] }) => {
   const [localVideos, setLocalVideos] = useState(videos);
   const [loading, setLoading] = useState(videos.length === 0);
   const [error, setError] = useState(null);
   const [activeVideo, setActiveVideo] = useState(null);
   const [completedVideos, setCompletedVideos] = useState({});
- const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
   useEffect(() => {
     const fetchVideos = async () => {
       try {

@@ -3,7 +3,7 @@ import "./Lessons.css";
 import axios from "axios";
 import Slider from "../HomeComponent/Slider";
 import VideoList from "../videoListComponent/videoList";
-
+  const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const Lessons = () => {
   const [categories, setCategories] = useState([]);
   const [progress, setProgress] = useState({});
@@ -11,7 +11,7 @@ const Lessons = () => {
   const [loading, setLoading] = useState(true);
   const [progressUpdating, setProgressUpdating] = useState(false);
   const [userId, setUserId] = useState(null);
-   const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+ 
   // Fetch user ID and decide data source (localStorage or backend)
   useEffect(() => {
     const initializeProgress = async () => {

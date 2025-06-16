@@ -4,9 +4,10 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { FiSave, FiX } from 'react-icons/fi';
 import './EditProfile.css'
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const EditProfile = () => {
   const navigate = useNavigate();
-  const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+  
   const [userData, setUserData] = useState({
     id : '',
     username: '',
