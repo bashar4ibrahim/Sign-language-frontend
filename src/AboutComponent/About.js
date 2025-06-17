@@ -2,44 +2,45 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./About.css";
 const Timeline = () => {
-  const milestones = [
-    {
-      year: "2015",
-      title: "Company Founded",
-      description: "Started in a small garage with just 3 team members and a big vision for digital design.",
-      icon: "🚀"
-    },
-    {
-      year: "2017",
-      title: "First Major Client",
-      description: "Landed our first Fortune 500 client, marking our entry into enterprise solutions.",
-      icon: "🏆"
-    },
-    {
-      year: "2019",
-      title: "Expanded Globally",
-      description: "Opened offices in London and Tokyo to serve international clients.",
-      icon: "🌎"
-    },
-    {
-      year: "2021",
-      title: "Product Suite Launched",
-      description: "Introduced our flagship product line that revolutionized workflow automation.",
-      icon: "✨"
-    },
-    {
-      year: "2023",
-      title: "1000+ Clients",
-      description: "Reached the milestone of serving over 1000 satisfied clients worldwide.",
-      icon: "🎯"
-    },
-    {
-      year: "2024",
-      title: "Future Horizons",
-      description: "Expanding into AI-powered design solutions and sustainable tech.",
-      icon: "🔮"
-    }
-  ];
+ const milestones = [
+  {
+    year: "2022",
+    title: "Inspiration Sparked",
+    description: "The idea was born to bridge the communication gap between the deaf community and society through accessible technology.",
+    icon: "💡"
+  },
+  {
+    year: "2023",
+    title: "Prototype Glove Built",
+    description: "Developed an IoT-powered glove that translates sign language into speech, marking our first step toward accessibility.",
+    icon: "🧤"
+  },
+  {
+    year: "2023",
+    title: "Your Voice Platform Started",
+    description: "Launched the initial version of the Your Voice web platform focused on translating voice to signs using AI.",
+    icon: "🗣️"
+  },
+  {
+    year: "2024",
+    title: "Web App Goes Public",
+    description: "Released our full-stack web application featuring lessons, emergency phrases, and real-time voice translation.",
+    icon: "🌐"
+  },
+  {
+    year: "2024",
+    title: "Community Engagement",
+    description: "Partnered with local organizations and deaf users to improve content, usability, and accessibility features.",
+    icon: "🤝"
+  },
+  {
+    year: "2025",
+    title: "AI-Powered Expansion",
+    description: "Integrating advanced voice recognition APIs and AI models to enhance real-time communication accuracy.",
+    icon: "🤖"
+  }
+];
+
 
   return (
     <div className="timeline-container">

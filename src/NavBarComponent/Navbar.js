@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Navbar.css';
-import logo from '../Assests/logo-black.png'; // Using single logo
+import logo from '../Assests/Logo.png'; // Using single logo
 import search_icon from '../Assests/search-b.png'; // Using single search icon
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { FaUserShield } from "react-icons/fa"; // Admin icon
